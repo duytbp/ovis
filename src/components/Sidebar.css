@@ -237,7 +237,8 @@ button.sidebar-section-label:focus-visible { outline-offset: calc(var(--ring-off
 /* Pinned rows stand first in a card whose top edge carries "── Pinned ──", like a fieldset's
    legend: the caption sits on the line, masked by the sidebar's own background. The list carries the
    name for screen readers, so the caption is hidden from them. */
-.sidebar-pinned {
+/* Keep the card's inset even when the list's own stylesheet resets ul padding later. */
+ul.sidebar-pinned {
   padding: var(--space-2) var(--space-1) var(--space-1);
   border: var(--hairline) solid var(--border);
   border-radius: var(--radius-lg);

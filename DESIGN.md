@@ -1386,7 +1386,10 @@ Alert rows of the table above from the `--droplet-*` roles in `src/styles.css`.
   menu) stand first, in the order they were pinned, in a card (a `--hairline` `--border` edge,
   `--radius-lg`, no fill, so hover and selection read inside it as elsewhere),
   with no mark of their own (the card says so); the rest follow `--space-2` below in the
-  chosen order. The card's caption sits on its top edge, as a fieldset's legend does
+  chosen order. Like Zed's inset, rounded list items, each row keeps its own selection shape:
+  the card keeps `--space-1` around the row's `--radius-md` corners and `--space-2` above its
+  first row for the caption. Card padding wins over list resets, so selected and hovered fills
+  and the keyboard focus ring stay clear of the frame. The card's caption sits on its top edge, as a fieldset's legend does
   (`.sidebar-pinned-label`: a pin and **PINNED**, centered, `--fs-2xs` semibold caps in
   `--text-dim` on the `--bg-panel` it masks the edge with); it is hidden from screen readers,
   where the list itself is labelled **Pinned**. Without pins there is no card and no caption. Pins are shared with the other browsers of the server.
